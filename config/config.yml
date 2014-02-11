@@ -3,7 +3,7 @@ development:
     consumer_key: 5zyUoNHYG2ARatRSfXSag
     consumer_secret: k8hGeu0jkNgN6aucJPhzarXuNbIzgfIOADHtNH6w08
 
-test:
+test: &test
   twitter:
     consumer_key: H4VNIWnJrrMNqjZqdQg
     consumer_secret: pNTYXrkva3oaiJUySgnKTXDNZUEbaiaMYFMwFf9Bo
