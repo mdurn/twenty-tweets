@@ -1,0 +1,17 @@
+development:
+  twitter: &twitter_default
+    consumer_key: 5zyUoNHYG2ARatRSfXSag
+    consumer_secret: k8hGeu0jkNgN6aucJPhzarXuNbIzgfIOADHtNH6w08
+
+test:
+  twitter:
+    consumer_key: H4VNIWnJrrMNqjZqdQg
+    consumer_secret: pNTYXrkva3oaiJUySgnKTXDNZUEbaiaMYFMwFf9Bo
+
+cucumber:
+  <<: *test
+
+production:
+  twitter:
+    consumer_key: tuOsBD9eYhPdKWl0Uw6KxA
+    consumer_secret: CCDrr7LUOG5taLAgvHYJnGc4XKdAQbQ1rSlEdgvwY
