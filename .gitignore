@@ -24,3 +24,6 @@
 
 # rspec config
 .rspec
+
+# system files
+*.DS_Store
