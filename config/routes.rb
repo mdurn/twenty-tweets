@@ -10,6 +10,12 @@ TwentyTweets::Application.routes.draw do
     get 'omniauth_callbacks/twitter'
   end
 
+  resources :users, only: [] do
+    member do
+      get :overview
+    end
+  end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
