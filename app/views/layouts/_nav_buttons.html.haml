@@ -1,0 +1,13 @@
+.btn-group.pull-right
+  - if current_user
+    %button.navbar-btn.btn.dropdown-toggle.user-img{'data-toggle' => 'dropdown'}
+      %img{src: current_user.image}
+    %button.navbar-btn.btn.dropdown-toggle{'data-toggle' => 'dropdown'}
+      -#%img{src: current_user.image, width: '20px', height: '20px'}
+      = current_user.twitter_nickname
+      %span.caret
+    %ul.dropdown-menu
+      %li
+        %a{href: destroy_user_session_path} Sign Out
+  - else
+    %a.navbar-btn.btn-primary.btn{href: user_omniauth_authorize_path(:twitter)} Sign In
