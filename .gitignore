@@ -21,3 +21,6 @@
 # ruby version and gemset files
 .ruby-version
 .ruby-gemset
+
+# rspec config
+.rspec
