@@ -11,3 +11,4 @@ Features:
 * Click on the image next to a tweet to see more information in a modal dialog.
 * Identical Twitter API queries are cached for 5 minutes.
 * Search queries are logged to the database and can be viewed at /tweets/search_log (for logged in users).
+* Tests (still writing more): bundle exec rspec
