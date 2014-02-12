@@ -1,8 +1,14 @@
-#userModal.modal.fade{tabindex: "-1", role: "dialog", 'aria-labelledby' => "userModalLabel", 'aria-hidden' => "true"}
-  .modal-header
-    %button{type: "button", class: "close", 'data-dismiss' => "modal", 'aria-hidden' => "true"}×
-    %h3#userModalLabel User
-  .modal-body
-    %p body
-  .modal-footer
-    %button.btn{'data-dismiss' => "modal", 'aria-hidden' => "true"} Close
+%div.modal.fade{id: "#{twitter_user.screen_name}Modal", tabindex: "-1", role: "dialog", 'aria-labelledby' => "#{twitter_user.screen_name}ModalLabel", 'aria-hidden' => "true"}
+  .modal-content.modal-dialog
+    .modal-header
+      %button{type: "button", class: "close", 'data-dismiss' => "modal", 'aria-hidden' => "true"}×
+      %img.pull-left{src: twitter_user.profile_image_uri}
+      %div{style: 'margin-left: 55px;'}
+        %h3{id: "#{twitter_user.screen_name}ModalLabel"}= "@#{twitter_user.screen_name}"
+    .modal-body
+      %p Name: #{twitter_user.name}
+      %p Followers: #{twitter_user.followers_count}
+      %p Tweets Count: #{twitter_user.tweets_count}
+      %p Latest Tweet: #{twitter_user.tweet.text}
+    .modal-footer
+      %button.btn{'data-dismiss' => "modal", 'aria-hidden' => "true"} Close

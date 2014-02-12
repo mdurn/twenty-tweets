@@ -2,7 +2,7 @@
   - @twitter_data.each do |result|
     %tr
       %td
-        %a{href: '#userModal', 'data-toggle' => "modal"}
+        %a{href: "\##{result.user.screen_name}Modal", 'data-toggle' => "modal"}
           %img{src: result.user.profile_image_uri}
       %td
         .tweet-header
@@ -11,3 +11,4 @@
           %span.tweet-time= result.created_at
         %p
           != get_tweet_html(result.full_text)
+    = render partial: 'user_modal', locals: {twitter_user: result.user}
