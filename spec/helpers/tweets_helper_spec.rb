@@ -11,5 +11,9 @@ require 'spec_helper'
 #   end
 # end
 describe TweetsHelper do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe 'get_tweet_html' do
+    it 'returns tweet text with @mentions replace by links' do
+      pending
+    end
+  end
 end
