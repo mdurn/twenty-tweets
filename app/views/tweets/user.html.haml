@@ -1,0 +1,7 @@
+.container
+  .row
+    .span12
+      %a{href: overview_path} Back To Overview
+      %h1= @screen_name
+      %p The 20 most recent tweets by @#{@screen_name}
+      = render partial: 'tweet_table'

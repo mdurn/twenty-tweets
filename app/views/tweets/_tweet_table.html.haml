@@ -1,0 +1,12 @@
+%table.table.table-striped.tweet-table
+  - @twitter_data.each do |result|
+    %tr
+      %td
+        %img{src: result.user.profile_image_uri}
+      %td
+        .tweet-header
+          %span.tweet-user-name=result.user.name
+          %a{href: tweets_user_path(result.user.screen_name)}= "@#{result.user.screen_name}"
+          %span.tweet-time= result.created_at
+        %p
+          != get_tweet_html(result.full_text)

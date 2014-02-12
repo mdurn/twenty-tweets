@@ -1,5 +1,0 @@
-= form_tag({controller: :users, action: :overview}, method: :get) do
-  = label_tag :q, "Search Twitter for:"
-  .inputs
-    = text_field_tag :q, nil, placeholder: "e.g. tech news"
-    = submit_tag "Search", class: 'btn btn-sm btn-primary'

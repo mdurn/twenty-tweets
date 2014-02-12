@@ -1,0 +1,21 @@
+// Place all the styles related to the tweets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.tweet-table{
+  img{
+    max-height: 48px;
+    max-width: 48px;
+  }
+  .tweet-header{
+    margin-bottom: 10px;
+  }
+  .tweet-user-name{
+    font-weight: bold;
+  }
+  .tweet-time{
+    margin-left: 5px;
+    font-size: 10px;
+    font-style: italic;
+  }
+}

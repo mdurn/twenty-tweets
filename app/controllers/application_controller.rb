@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   private
 
   def after_sign_in_path_for(user)
-    overview_user_path(user)
+    overview_path
   end
 
   def after_sign_out_path_for(user)

@@ -12,13 +12,21 @@ class User < ActiveRecord::Base
   validates_presence_of :password, on: :create
   validates_length_of :password, within: Devise.password_length, allow_blank: false
 
+  ####################
+  # Instance Methods #
+  ####################
+
+  def twitter_client
+    TwitterUserClient.new(self)
+  end
+
   #################
   # Class Methods #
   #################
 
   class << self
 
-    def find_for_twitter_oauth(auth)
+    def find_or_create_from_twitter(auth)
       where(auth.slice(:provider, :uid)).first_or_create do |user|
         user.provider = auth['provider']
         user.uid = auth['uid']

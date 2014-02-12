@@ -39,6 +39,7 @@ gem 'haml-rails', '0.5.3'
 gem 'omniauth', '1.2.1'
 gem 'omniauth-twitter', '1.0.1'
 gem 'pg', '0.17.1'
+gem 'twitter', '5.7.0'
 
 group :development, :test do
   gem 'debugger'

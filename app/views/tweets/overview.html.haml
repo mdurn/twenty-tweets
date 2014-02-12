@@ -1,0 +1,13 @@
+.container
+  .row
+    .span12
+      = form_tag({controller: :tweets, action: :overview}, method: :get) do
+        = label_tag :q, "Search Twitter for:"
+        .inputs
+          = text_field_tag :q, @query, placeholder: 'e.g. StackSocial'
+          = submit_tag "Search", class: 'btn btn-sm btn-primary'
+  .row
+    .span12
+      %h1 Overview
+      %p Twitter search results for "#{@query || TwitterUserClient::DEFAULT_SEARCH_QUERY}"
+      = render partial: 'tweet_table'
