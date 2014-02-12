@@ -1,7 +1,5 @@
-== README
-
 Hosted on Heroku at:
-twenty-tweets.herokuapp.com
+http://twenty-tweets.herokuapp.com
 
 Log in with Twitter, have fun.
 
