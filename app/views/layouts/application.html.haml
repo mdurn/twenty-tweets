@@ -16,7 +16,4 @@
           %a.navbar-brand{href: current_user ? overview_path : root_path} TwentyTweets
     -#%p.notice= notice
     -#%p.alert= alert
-    .container
-      .row
-        .span12
-          = yield
+    = yield

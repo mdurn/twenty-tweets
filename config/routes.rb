@@ -12,6 +12,7 @@ TwentyTweets::Application.routes.draw do
 
   get "tweets/overview"
   get "tweets/user/:screen_name" => 'tweets#user', as: :tweets_user
+  get "tweets/search_log"
 
   get 'overview' => 'tweets#overview', as: :overview
 

@@ -2,7 +2,8 @@
   - @twitter_data.each do |result|
     %tr
       %td
-        %img{src: result.user.profile_image_uri}
+        %a{href: '#userModal', 'data-toggle' => "modal"}
+          %img{src: result.user.profile_image_uri}
       %td
         .tweet-header
           %span.tweet-user-name=result.user.name

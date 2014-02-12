@@ -12,12 +12,22 @@ class User < ActiveRecord::Base
   validates_presence_of :password, on: :create
   validates_length_of :password, within: Devise.password_length, allow_blank: false
 
+  ################
+  # Associations #
+  ################
+
+  has_many :twitter_search_queries
+
   ####################
   # Instance Methods #
   ####################
 
   def twitter_client
     TwitterUserClient.new(self)
+  end
+
+  def log_twitter_search!(query)
+    twitter_search_queries.create(query: query)
   end
 
   #################

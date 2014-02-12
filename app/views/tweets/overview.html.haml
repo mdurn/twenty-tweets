@@ -11,3 +11,5 @@
       %h1 Overview
       %p Twitter search results for "#{@query || TwitterUserClient::DEFAULT_SEARCH_QUERY}"
       = render partial: 'tweet_table'
+
+= render partial: 'user_modal'
